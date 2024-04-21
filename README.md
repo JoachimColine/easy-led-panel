@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## What is it?
 
-The Octobridge is a compact hardware solution for wiring up to 8 LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board. 
+The Octobridge is a compact hardware solution for wiring up to eight WS2811b LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board. 
 It facilitates cable work and makes it easy to handcraft large LED panels such as the ones shown in the <a href="https://www.youtube.com/watch?v=32DB5OOd8oo&ab_channel=JoachimColine">demo</a> video.
 
 This repository aims to
@@ -56,17 +56,26 @@ I had the chance to put this project to practice with my <a href= "https://www.t
 
 ## How to build an LED panel with the Octobridge 
 ### Working principle
-A teensy-driven LED panel is made up of 3 main parts:
+A Teensy-driven LED panel is made up of 3 main parts:
 - Power supply, needed for producing light,
 - a microcontroller, needed for controlling the RGB values of each LED,
-- LED strips aligned on top of one another, needed for creating a 2D grid of LEDs. 
+- WS2811b LED strips aligned on top of one another, needed for creating a 2D grid of LEDs. 
 
-The Octobridge is meant to make the bridge between these parts (hence the name! :wink:) as shown in the illustration here below. 
+The Octobridge is meant to make the bridge between these parts (hence the name! :wink:) as shown in the simplififed illustration below. 
 
 <p align="center">
-<img src="images/working_principle.png" alt="Improv" width="600">
+<img src="images/working_principle.png" width="600">
 </p>
 
+In practice, the power received comes from a 5V DC power supply, and data comes from a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board using two CAT6 Ethernet cables. 
+This is shown in the illustration below.
+
+<p align="center">
+<img src="images/working_principle_practice.png" alt="Improv" width="600">
+</p>
+
+The top four LED strips are powered by the top power input and driven by the top CAT6 Ethernet cable.
+The bottom four LED strips are powered by the bottom power input and driven by the bottom CAT6 Ethernet cable.
 
 
 ### Step-by-step assembly
