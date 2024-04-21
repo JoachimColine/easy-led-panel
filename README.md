@@ -55,6 +55,10 @@ I had the chance to put this project to practice with my <a href= "https://www.t
 </p>
 
 ## How to build an LED panel with the Octobridge 
+### Caution
+- LED strips can be dangerous for the human eye, as they produce very bright light. Be careful. Place a diffusing material in front of the LEDs to attenuate the light.
+- LED strips draw a lot of power. Be careful. Incorrect or unsafe wiring can be dangerous.
+
 ### Working principle
 A Teensy-driven LED panel is made up of 3 main parts:
 - Power supply, needed for producing light,
