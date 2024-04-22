@@ -81,6 +81,19 @@ This is shown in the illustration below.
 The top four LED strips are powered by the top power input and driven by the top CAT6 Ethernet cable.
 The bottom four LED strips are powered by the bottom power input and driven by the bottom CAT6 Ethernet cable.
 
+### List of required components
+- A <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board, mounted on an OctoWS2811 Adaptor,
+- two CAT6 Ethernet cables,
+- a 5V DC power supply (that can draw up to 40A),
+- thick wires for connecting the power supply to the Octobridge (the thicker, the better. Too thin wires will burn or cause incorrect LED colors),  
+- WS2811b LED strips,
+- an Octobridge (the PCB files can be found [here](/kicad)),
+- passive components to be soldered on the Octobridge, that is
+    - eight 100ohm resistors,
+	- eight 1000µF capacitors (6.3V, 3.5mm lead spacing),
+	- two single-port, tab-up (not down!) RJ45 connectors (through-hole, 8P8C, shielded, right-angle),
+	- eight S3B-XH-A JST connectors,
+	- eight JST XH 2.54mm 3-pin wired connectors.
 
 ### Step-by-step assembly
 More details to come!
@@ -102,4 +115,3 @@ More details to come!
 [license-url]: https://github.com/JoachimColine/Octobridge/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/joachim-coline
-[product-screenshot]: images/screenshot.png
