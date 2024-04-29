@@ -44,7 +44,7 @@ The Octobridge is a compact hardware solution for wiring up to eight WS2811b LED
 It facilitates cable work and makes it easy to handcraft large LED panels such as the ones shown in the <a href="https://www.youtube.com/watch?v=32DB5OOd8oo&ab_channel=JoachimColine">demo</a> video.
 
 This repository aims to
-- provide a [tutorial](#how-to-build-an-led-panel-with-the-octobridge) for assembling and programming a large LED panel,
+- provide [guidelines](#how-to-build-an-led-panel-with-the-octobridge) for assembling and programming a large LED panel,
 - give public access to the [PCB files](/kicad),
 - suggest some program snippets and ideas for complex animations.
 
@@ -124,9 +124,19 @@ Programming is particularly easy under the <a href="https://www.arduino.cc/">Ard
 We're all set! 
 
 ### Your first LED animation
-The last step of the project is also the most fun: you get to program your own LED animations :sunglasses:.
+The last part of the project is also the most fun: you get to program your own LED animations :sunglasses:.
 
-More details to come!
+- Install and run the <a href="https://www.arduino.cc/">Arduino</a> IDE on your computer,
+- from the Arduino main window, go to the _Boards Manager_ and install the <a href="https://www.pjrc.com/teensy/td_download.html">Teensy</a> extension by Paul Stoffregen (as shown in the image below),
+<p align="center">
+<img src="images/arduino_boards_manager.PNG" width="200">
+</p>
+
+- go to _Manage Libraries ..._ under the _Tools_ menu, and install the <a href="https://fastled.io/">FastLED</a> and the <a href="https://www.pjrc.com/teensy/td_libs_OctoWS2811.html">OctoWS2811</a> libraries,
+- open your first LED animation file by going to _File_&rarr;_Examples_&rarr;_OctoWS2811_&rarr;_BasicTest_FastLED_.
+- in the code, edit the value of `NUM_LEDS` to your total number of LEDs.
+
+Finally, plug your Teensy to your computer, upload the sketch, and power up the Octobridge (after checking the wiring). Congratulations, you just brought life to your LED panel! :rocket:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
