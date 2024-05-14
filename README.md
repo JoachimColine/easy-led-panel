@@ -24,10 +24,10 @@
     <img src="images/octobridge_illustration.PNG" width="600">
   </a>
 
-  <h3 align="center">The Octobridge</h3>
+  <h3 align="center">Easy LED Panel</h3>
 
   <p align="center">
-    A printed circuit board for wiring up to 8 LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board
+    Assemble and program up to 8 LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board
     <br />
     <a href="https://www.youtube.com/watch?v=32DB5OOd8oo&ab_channel=JoachimColine">View Demo</a>
     ·
@@ -40,13 +40,11 @@
 <!-- ABOUT THE PROJECT -->
 ## What is it?
 
-The Octobridge is a compact hardware solution for wiring up to eight WS2811b LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board. 
-It facilitates cable work and makes it easy to handcraft large LED panels such as the ones shown in the <a href="https://www.youtube.com/watch?v=32DB5OOd8oo&ab_channel=JoachimColine">demo</a> video.
-
 This repository aims to
-- provide [guidelines](#how-to-build-an-led-panel-with-the-octobridge) for assembling and programming a large LED panel,
-- give public access to the [PCB files](/kicad),
-- suggest some program snippets and ideas for complex animations.
+- provide [guidelines](#how-to-build-an-led-panel) for assembling and programming a simple LED panel,
+- give public access to the [PCB files](/kicad) of a component I called the Octobridge,
+- provide a way to simulate LED animations on your computer, allowing easy tests without hardware, (TBD)
+- suggest some program snippets that can be directly uploaded to your LED panel. (TBD)
 
 I had the chance to put this project to practice with my <a href= "https://www.touchouss.lol/">improv team</a>. By aligning 8 strips of 150 LEDs and with a little programming, we put on a great show!  :sunglasses:
 
@@ -54,7 +52,7 @@ I had the chance to put this project to practice with my <a href= "https://www.t
 <img src="images/octobridge_improv.jpg" width="400">
 </p>
 
-## How to build an LED panel with the Octobridge 
+## How to build an LED panel
 ### Caution
 - LED strips can be dangerous for the human eye, as they produce very bright light. Be careful. Place a diffusing material in front of the LEDs to attenuate the light.
 - LED strips draw a lot of power. Be careful. Incorrect or unsafe wiring can be dangerous.
@@ -65,7 +63,7 @@ A Teensy-driven LED panel is made up of 3 main parts:
 - a microcontroller, needed for controlling the RGB values of each LED,
 - WS2811b LED strips aligned on top of one another, needed for creating a 2D grid of LEDs. 
 
-The Octobridge is meant to make the bridge between these parts (hence the name! :wink:) as shown in the simplififed illustration below. 
+To make the bridge between these parts, and to facilitate cable work, I designed a printed circuit board I called the Octobridge. As shown in the simplified illustration below, the Octobridge receives power and data, and distributes it to the LED strips. 
 
 <p align="center">
 <img src="images/working_principle.png" width="600">
