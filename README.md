@@ -23,11 +23,14 @@
   <a href="https://github.com/JoachimColine/Octobridge">
     <img src="images/octobridge_illustration.PNG" width="600">
   </a>
+  <a href="https://github.com/JoachimColine/Octobridge">
+	<img src="images/easy-led-panel-animated.gif" width="600">
+  </a>
 
   <h3 align="center">Easy LED Panel</h3>
 
   <p align="center">
-    Assemble and program up to 8 LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board
+    Assemble, program and simulate up to 8 LED strips driven by a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board
     <br />
     <a href="https://www.youtube.com/watch?v=32DB5OOd8oo&ab_channel=JoachimColine">View Demo</a>
     ·
@@ -41,9 +44,9 @@
 ## What is it?
 
 This repository aims to
-- provide [guidelines](#how-to-build-an-led-panel) for assembling and programming a simple LED panel,
-- give public access to the [PCB files](/kicad) of a component I called the Octobridge,
-- provide a way to simulate LED animations on your computer, allowing easy tests without hardware, (TBD)
+- provide [guidelines](#how-to-build-your-led-panel) for assembling and programming a simple LED panel using LED strips,
+- give public access to the [PCB files](/kicad) of a component (the _Octobridge_),
+- provide a way to [simulate](#how-to-simulate-your-led-panel) your LED panel on your computer, allowing easy tests without hardware,
 - suggest some program snippets that can be directly uploaded to your LED panel. (TBD)
 
 I had the chance to put this project to practice with my <a href= "https://www.touchouss.lol/">improv team</a>. By aligning 8 strips of 150 LEDs and with a little programming, we put on a great show!  :sunglasses:
@@ -52,7 +55,7 @@ I had the chance to put this project to practice with my <a href= "https://www.t
 <img src="images/octobridge_improv.jpg" width="400">
 </p>
 
-## How to build an LED panel
+## How to build your own LED panel
 ### Caution
 - LED strips can be dangerous for the human eye, as they produce very bright light. Be careful. Place a diffusing material in front of the LEDs to attenuate the light.
 - LED strips draw a lot of power. Be careful. Incorrect or unsafe wiring can be dangerous.
@@ -84,7 +87,7 @@ The timing and sequence of these pulses encode the color and brightness data for
 Each LED interprets the data intended for it and adjusts its color and brightness accordingly. 
 
 By being individually addressable, the WS2811b LEDs can be programmed with high flexibility. 
-Programming is particularly easy under the <a href="https://www.arduino.cc/">Arduino</a> framework as explained in [your first LED animation](#your-first-led-animation).
+Programming is particularly easy under the <a href="https://www.arduino.cc/">Arduino</a> framework as explained in the [LED programming section](#how-to-program-your-led-panel).
 
 ### List of required components
 - A <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board, mounted on an OctoWS2811 Adaptor,
@@ -121,7 +124,7 @@ Programming is particularly easy under the <a href="https://www.arduino.cc/">Ard
 	
 We're all set! 
 
-### Your first LED animation
+## How to program your own LED panel
 The last part of the project is also the most fun: you get to program your own LED animations :sunglasses:.
 
 - Install and run the <a href="https://www.arduino.cc/">Arduino</a> IDE on your computer,
@@ -130,11 +133,48 @@ The last part of the project is also the most fun: you get to program your own L
 <img src="images/arduino_boards_manager.PNG" width="200">
 </p>
 
+### Your first LED animation
 - go to _Manage Libraries ..._ under the _Tools_ menu, and install the <a href="https://fastled.io/">FastLED</a> and the <a href="https://www.pjrc.com/teensy/td_libs_OctoWS2811.html">OctoWS2811</a> libraries,
 - open your first LED animation file by going to _File_&rarr;_Examples_&rarr;_OctoWS2811_&rarr;_BasicTest_FastLED_.
 - in the code, edit the value of `NUM_LEDS` to your total number of LEDs.
 
 Finally, plug your Teensy to your computer, upload the sketch, and power up the Octobridge (after checking the wiring). Congratulations, you just brought life to your LED panel! :rocket:
+
+### Programming custom animations
+You can create your own animations using the <a href="https://fastled.io/">FastLED</a> and/or the <a href="https://www.pjrc.com/teensy/td_libs_OctoWS2811.html">OctoWS2811</a> libraries. Possibilities are endless! Have fun :grinning:
+
+## How to simulate your own LED panel
+Want to test an idea without wiring up hardware? You have come to the right place! 
+
+I have made available a [Python script](/simulator/simulator.py) that simulates an LED panel. 
+The downside of this simulator is that it is not using Arduino, which means you will have to re-write the program if you want to upload it to your <a href="https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a>  board. 
+However,
+- Python is awesome (change my mind),
+- you can test your ideas quickly and easily without hardware, 
+- resulting animations can be easily visualized and shared,
+- programming simulated animations is very similar to programming in Arduino.
+
+### Requirements
+You will need to install <a href="https://www.python.org/downloads/">Python</a> by downloading and running their latest installer. See <a href="https://github.com/PackeTsar/Install-Python/blob/master/README.md">this repository</a> for a complete tutorial for installing Python on common operating systems.
+The simulator depends on <a href="https://www.pygame.org/wiki/GettingStarted">Pygame</a> which you also need to install.
+
+### Your first simulation
+Once you have installed [all requirements](#requirements), run the [animation example](/simulator/animationExample.py) script with the command
+```
+python animationExample.py
+```
+from the terminal. A window will pop, displaying the following LED animation: 
+
+<p align="center">
+  <a href="https://github.com/JoachimColine/Octobridge">
+	<img src="images/simulation-example-animated.gif" width="600">
+  </a>
+</p>
+
+
+Congratulations, you just brought life to your simulated LED panel! :rocket:
+### Programming custom simulated animations
+You can create your own animations using the simulator. I would recommend doing so in a new Python script of your own in the [simulator](/simulator) directory. A great way to start would be to copy the [animation example](/simulator/animationExample.py) and edit it in a new file.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
