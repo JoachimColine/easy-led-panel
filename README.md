@@ -44,9 +44,9 @@
 ## What is it?
 
 This repository aims to
-- provide [guidelines](#how-to-build-your-led-panel) for assembling and programming a simple LED panel using LED strips,
+- provide [guidelines](#how-to-build-your-own-led-panel) for assembling and programming a simple LED panel using LED strips,
 - give public access to the [PCB files](/kicad) of a component (the _Octobridge_),
-- provide a way to [simulate](#how-to-simulate-your-led-panel) your LED panel on your computer, allowing easy tests without hardware,
+- provide a way to [simulate](#how-to-simulate-your-own-led-panel) your LED panel on your computer, allowing easy tests without hardware,
 - suggest some program snippets that can be directly uploaded to your LED panel. (TBD)
 
 I had the chance to put this project to practice with my <a href= "https://www.touchouss.lol/">improv team</a>. By aligning 8 strips of 150 LEDs and with a little programming, we put on a great show!  :sunglasses:
@@ -87,7 +87,7 @@ The timing and sequence of these pulses encode the color and brightness data for
 Each LED interprets the data intended for it and adjusts its color and brightness accordingly. 
 
 By being individually addressable, the WS2811b LEDs can be programmed with high flexibility. 
-Programming is particularly easy under the <a href="https://www.arduino.cc/">Arduino</a> framework as explained in the [LED programming section](#how-to-program-your-led-panel).
+Programming is particularly easy under the <a href="https://www.arduino.cc/">Arduino</a> framework as explained in the [LED programming section](#how-to-program-your-own-led-panel).
 
 ### List of required components
 - A <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board, mounted on an OctoWS2811 Adaptor,
