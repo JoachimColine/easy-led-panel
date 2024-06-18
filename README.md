@@ -26,6 +26,9 @@
   <a href="https://github.com/JoachimColine/Octobridge">
 	<img src="images/easy-led-panel-animated.gif" width="600">
   </a>
+  <a href="https://github.com/JoachimColine/Octobridge">
+	<img src="images/easy-led-panel-animated-real.gif" width="600">
+  </a>
 
   <h3 align="center">Easy LED Panel</h3>
 
