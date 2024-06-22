@@ -185,7 +185,11 @@ void loop() {
 
 ### Requirements
 You will need to install <a href="https://www.python.org/downloads/">Python</a> by downloading and running their latest installer. See <a href="https://github.com/PackeTsar/Install-Python/blob/master/README.md">this repository</a> for a complete tutorial for installing Python on common operating systems.
-The simulator depends on <a href="https://www.pygame.org/wiki/GettingStarted">Pygame</a> which you also need to install.
+The simulator depends on <a href="https://www.pygame.org/wiki/GettingStarted">Pygame</a> which you also need to install. This is easily done using the command
+```
+pip install pygame
+```
+from the terminal.
 
 ### Your first simulation
 Once you have installed [all requirements](#requirements), run the [animation example](/simulator/animationExample.py) script with the command
