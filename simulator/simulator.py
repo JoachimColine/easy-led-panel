@@ -3,8 +3,8 @@ import sys
 import time
 
 parameters = { 
-              'num_leds'     : 800,  # total leds count (multiple of 8)
-              'window_width' : 950, # pygame window width (pixels)
+              'num_leds'     : 1200,  # total leds count (multiple of 8)
+              'window_width' : 1500, # pygame window width (pixels)
               'window_height': 130,  # pygame window height (pixels)
               'led_size'     : 7,    # individual led size (pixels) 
               'led_spacing'  : 1     # spacing between leds (pixels)

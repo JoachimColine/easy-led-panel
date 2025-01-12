@@ -117,6 +117,7 @@ def scrollText(leds, text, textColor, backColor, delay):
     isOn = False
     for i in range(len(text)):
         alphabetIndex = max(0, ord(text[i]) - ord(' '))
+        # each letter has a width of 5 leds. Use use one more as a space between letters
         for j in range(6): # columns
             for k in range(8): # rows
                 isOn = byte_alphabet[alphabetIndex][j] & (1 << (7 - k)) if j < 5 else False
