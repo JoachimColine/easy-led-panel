@@ -21,7 +21,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/JoachimColine/Octobridge">
-    <img src="images/octobridge_illustration.PNG" width="600">
+    <img src="images/octobridge_illustration.webp" width="600">
   </a>
   <a href="https://github.com/JoachimColine/Octobridge">
 	<img src="images/easy-led-panel-animated.gif" width="600">
@@ -55,7 +55,7 @@ This repository aims to
 I had the chance to put this project to practice with my <a href= "https://www.touchouss.lol/">improv team</a>. By aligning 8 strips of 150 LEDs and with a little programming, we put on a great show!  :sunglasses:
 
 <p align="center">
-<img src="images/octobridge_improv.jpg" width="400">
+<img src="images/octobridge_improv.webp" width="400">
 </p>
 
 ## How to build your own LED panel
@@ -72,14 +72,14 @@ A Teensy-driven LED panel is made up of 3 main parts:
 To make the bridge between these parts, and to facilitate cable work, I designed a printed circuit board I called the Octobridge. As shown in the simplified illustration below, the Octobridge receives power and data, and distributes it to the LED strips. 
 
 <p align="center">
-<img src="images/working_principle.png" width="600">
+<img src="images/working_principle.webp" width="600">
 </p>
 
 In practice, the power received comes from a 5V DC power supply, and data comes from a <a href= "https://www.pjrc.com/store/octo28_adaptor.html">Teensy</a> board using two CAT6 Ethernet cables. 
 This is shown in the illustration below.
 
 <p align="center">
-<img src="images/working_principle_practice.png" width="600">
+<img src="images/working_principle_practice.webp" width="600">
 </p>
 
 The top four LED strips are powered by the top power input and driven by the top CAT6 Ethernet cable.
@@ -115,12 +115,12 @@ Programming is particularly easy under the <a href="https://www.arduino.cc/">Ard
 	- solder the passive components on the Octobridge (watch out for the polarity of your capacitors!),
 	- solder the JST XH 2.54mm 3-pin wired connectors to your LED strips (make sure the pin mapping is respected. Refer to the [wiring circuit](/kicad/octobridge.pdf) or to the image below),
 	<p align="center">
-	<img src="images/pin_map_led_strip.png" width="300">
+	<img src="images/pin_map_led_strip.webp" width="300">
 	</p>
 	
 	- turn off the power supply and wire it to the Octobridge (watch out for the right GND and 5V connections, as shown in the image below),
 	<p align="center">
-	<img src="images/pin_map_power.png" width="500">
+	<img src="images/pin_map_power.webp" width="500">
 	</p>
 	
 	- connect your LED strips and your Teensy board to the Octobridge.
@@ -133,7 +133,7 @@ The last part of the project is also the most fun: you get to program your own L
 - Install and run the <a href="https://www.arduino.cc/">Arduino</a> IDE on your computer,
 - from the Arduino main window, go to the _Boards Manager_ and install the <a href="https://www.pjrc.com/teensy/td_download.html">Teensy</a> extension by Paul Stoffregen (as shown in the image below),
 <p align="center">
-<img src="images/arduino_boards_manager.PNG" width="200">
+<img src="images/arduino_boards_manager.webp" width="200">
 </p>
 
 ### Your first LED animation
